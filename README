@@ -1,0 +1,1 @@
+docker run -rm -P --name db keremk/postgres_dev

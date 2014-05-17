@@ -34,7 +34,8 @@ USER postgres
 #       allows the RUN command to span multiple lines.
 RUN    /etc/init.d/postgresql start &&\
     psql --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" &&\
-    createdb -O docker docker
+    createdb -O docker tidepool_V2_games_dev &&\
+    createdb -O docker tidepool_V2_users_dev
 
 # Adjust PostgreSQL configuration so that remote connections to the
 # database are possible. 
